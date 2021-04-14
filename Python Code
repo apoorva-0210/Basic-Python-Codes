@@ -3,6 +3,6 @@
 df.replace(',','', regex=True, inplace=True)
 for i in df_columns:
   try:
-    df[i]=df[i].astype(int)
+    df[i]=df[i].apply(int)
   except:
     pass
