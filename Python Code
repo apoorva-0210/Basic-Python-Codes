@@ -1,0 +1,8 @@
+# Converting string values having commas in between them to integer values:
+
+df.replace(',','', regex=True, inplace=True)
+for i in df_columns:
+  try:
+    df[i]=df[i].astype(int)
+  except:
+    pass
